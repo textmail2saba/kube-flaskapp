@@ -1,0 +1,16 @@
+version: '3'
+services:
+  flask_app:
+    container_name: flask_web
+    image: sabacp/flask_app
+    build: 
+      context: flask_app
+    ports:
+      - "5000:5000" 
+  mysql_app:
+    container_name: mysql_db
+    image: sabacp/mysql_app
+    build:
+      context: mysql_app
+    ports:
+      - 3306
